@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace MonogameTest
+namespace Game1
 {
     /// <summary>
     /// This is the main type for your game.
@@ -11,10 +11,7 @@ namespace MonogameTest
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-        Texture2D sidestepper;
-        Vector2 position;
-
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -30,7 +27,6 @@ namespace MonogameTest
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            position = new Vector2(10.8f, 50);
 
             base.Initialize();
         }
@@ -45,7 +41,6 @@ namespace MonogameTest
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            sidestepper = Content.Load<Texture2D>("sidestepper");
         }
 
         /// <summary>
@@ -78,14 +73,9 @@ namespace MonogameTest
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Goldenrod);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            spriteBatch.Begin();
-
-            spriteBatch.Draw(sidestepper, position, Color.White);
-
-            spriteBatch.End();
 
             base.Draw(gameTime);
         }
