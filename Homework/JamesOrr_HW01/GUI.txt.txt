@@ -1,0 +1,30 @@
+This GUI is a simple mail order program. 
+It will ask the user to fill in various data fields to order products in an organized manner.
+
+At the top of the order form, you will enter your name in a text box and hit the button next to confirm it.
+
+Below the name section is a drop down menu for the user to choose from multiple products,
+alongside a numeric up down tool to select the quantity of the product from 1 to 10. There is another button to confirm it.
+
+Then there is a group box for the user to choose a payment method. There is also a text box next to the "other"
+option to write in and select a payment method not listed. Selecting one will immediately deselect another
+and confirm the chosen method.
+
+Then there is a date selector for the person to choose when to have the product(s) delivered. 
+Choosing the date automatically confirms when it will be sent.
+
+Below that is a text box to enter delivery details. The button next to it will confirm the written details.
+
+Off to the side of these is a large group box that collects the data from the previously mentioned parts.
+The entered name, payment method, product and quantity, date of delivery, and delivery details
+will be sent here once they are confirmed.
+
+Below the large group box are three button: clear, confirm, and close.
+The clear button will reset all of the data in the form to it's default values and clear everything in the order form group box.
+
+The confirm button will check if every field in the order group box is filled in.
+	-If one or all of the fields are not filled in, a label will appear to tell the user to enter all of the data.
+	-If all of the fields are filled in, the same label will appear to confirm that the order was sent.
+
+Once the user is done with the program, they may click the "Close Program" button
+next to the "Confirm Order" button to close the program.
