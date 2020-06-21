@@ -27,6 +27,18 @@ namespace JamesOrr_HW02
             set { texture = value; }
         }
 
+        public int X    //Sets up the X value of the rectangle
+        {
+            get { return position.X; }
+            set { position.X = value; }
+        }
+
+        public int Y    //Sets up the Y value of the rectangle
+        {
+            get { return position.Y; }
+            set { position.Y = value; }
+        }
+
         //Constructor
         protected GameObject(int xCoordinate, int yCoordinate, int width, int height)
         {

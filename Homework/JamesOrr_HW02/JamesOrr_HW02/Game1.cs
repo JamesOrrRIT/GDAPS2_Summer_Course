@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Collections.Generic;
 
 namespace JamesOrr_HW02
 {
@@ -22,8 +23,8 @@ namespace JamesOrr_HW02
         SpriteBatch spriteBatch;
 
         //Counts the current level, remaining time, and a random number to determine coordinates
-        int currentLevel;
-        double timer = 15;
+        int currentLevel = 1;    //The player always starts on level 1
+        double timer = 15;    //The timer will always start at 15 seconds
         Random rng = new Random();
 
         //Identifies the current width and height of the game screen
@@ -31,7 +32,8 @@ namespace JamesOrr_HW02
         int windowHeight;
 
         //Allows us to create text
-        private SpriteFont arial12;
+        private SpriteFont mainFont;
+        private SpriteFont spriteFont;
 
         //Textures used for the player and collectible objects
         private Texture2D playerSprite;
@@ -46,6 +48,7 @@ namespace JamesOrr_HW02
 
         //Creates the player and collectibles
         Player newPlayer;
+        List<Collectible> collectibleList = new List<Collectible>();
 
         public Game1()
         {
@@ -71,7 +74,22 @@ namespace JamesOrr_HW02
         private void NextLevel()    //Will trigger every time the player moves to the next level of the game
         {
             currentLevel += 1;    //Increases the level count by one
-            timer = 20;    //Restatrts the timer to 20 seconds when the new level loads
+            timer = 15;    //Restatrts the timer to 15 seconds when the new level loads
+            newPlayer.LevelScore = 0;    //Resets the player's level score
+
+            newPlayer.X = (windowWidth / 2) - 50;    //Resets the player's position to the middle of the screen
+            newPlayer.Y = (windowHeight / 2) - 50;
+
+            collectibleList.Clear();    //Clears every item from the collectible list
+
+            for (int i = 0; i < (currentLevel + 1); i++)    //The current number of collectibles is one higher than the level number
+            {
+                Collectible newItem = new Collectible(rng.Next(10, (windowWidth - 85)), rng.Next(10, (windowHeight - 85)), 75, 75);    //Creates a new collectible
+
+                newItem.Texture = collectibleSprite;    //Apllies the collectibles texture
+
+                collectibleList.Add(newItem);
+            }
         }
 
         private void ResetGame()    //Activates every time the player starts the game from the beginning
@@ -82,18 +100,40 @@ namespace JamesOrr_HW02
         }
 
         private void ScreenWrap()    //Alters player position if the move too far off screen
-        {
+        {    //Because the player is 100 x 100 pixels, the entire image should be offscreen before wrapping back around
+            if (newPlayer.X <= -110)    //If the player moves too far left....
+            {
+                newPlayer.X = windowWidth;    //they appear from the right side
+            }
 
+            if (newPlayer.X >= (windowWidth) + 10)    //If the player moves too far right...
+            {
+                newPlayer.X = -100;    //they appear from the left side
+            }
+
+            if (newPlayer.Y <= -110)    //If the player moves too far up...
+            {
+                newPlayer.Y = windowHeight;    //they appear from the bottom
+            }
+
+            if (newPlayer.Y >= (windowHeight) + 10)    //If the player moves too far down...
+            {
+                newPlayer.Y = -100;    //they appear from the top
+            }
         }
 
-        private bool SingleKeyPress(Keys key, KeyboardState currentKeyboardState)
+        private bool SingleKeyPress(Keys key, KeyboardState kbState)
         {
-            if (currentKeyboardState.IsKeyDown(key) && previousKbState.IsKeyUp(key))
+            //Makes sure of when a key is pressed once
+            if (kbState.IsKeyDown(key) && previousKbState.IsKeyUp(key))
             {
                 return true;
             }
 
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -106,6 +146,14 @@ namespace JamesOrr_HW02
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            mainFont = Content.Load<SpriteFont>("mainFont");    //Retrieves the data for the text
+            spriteFont = Content.Load<SpriteFont>("SpriteFont1");
+
+            playerSprite = Content.Load<Texture2D>("dragonfly2");    //Retrieves the textures that will be used
+            collectibleSprite = Content.Load<Texture2D>("flower");
+
+            newPlayer = new Player((windowWidth / 2) - 50, (windowHeight / 2) - 50, 100, 100);
+            newPlayer.Texture = playerSprite;
         }
 
         /// <summary>
@@ -129,7 +177,7 @@ namespace JamesOrr_HW02
 
             // TODO: Add your update logic here
             KeyboardState kbState = Keyboard.GetState();
-            KeyboardState previousKbState;
+            KeyboardState previousKbState = kbState;
 
             switch (activeState)
             {
@@ -138,29 +186,68 @@ namespace JamesOrr_HW02
                     if (SingleKeyPress(Keys.Enter, kbState) == true)    //Once the player presses the enter key....
                     {
                         activeState = GameStates.Game;    //the screen transitions to the main game
+                        ResetGame();    //Resets all data to restart the game
                     }
                     break;
 
                 //Game
                 case GameStates.Game:
-                    //Updates the counter
-                    timer -= 0.016;    //The timer decreases by this amount each time update is called
+
+                    previousKbState = kbState;    //The previous keyboard state will become the current keyboard state
+                    kbState = Keyboard.GetState();    //Retrieves the currently pressed keys
+
+                    timer -= gameTime.ElapsedGameTime.TotalSeconds;    //The timer decreases in real time
+
+                    if (kbState.IsKeyDown(Keys.Left) == true)    //Moves the player left
+                    {
+                        newPlayer.X -= 2;
+                    }
+
+                    if (kbState.IsKeyDown(Keys.Right) == true)    //Moves the player right
+                    {
+                        newPlayer.X += 2;
+                    }
+
+                    if (kbState.IsKeyDown(Keys.Up) == true)    //Moves the player up
+                    {
+                        newPlayer.Y -= 2;
+                    }
+
+                    if (kbState.IsKeyDown(Keys.Down) == true)    //Moves the player down
+                    {
+                        newPlayer.Y += 2;
+                    }
+
+                    ScreenWrap();    //Constantly calls the ScreenWrap method if the player strays too far off screen
+
+                    for (int i = 0; i < collectibleList.Count; i++)    //Check every collectible inside the list
+                    {
+                        if (collectibleList[i].CheckCollision(newPlayer) == true && collectibleList[i].Active == true)    //Once the player collides with the object....
+                        {
+                            collectibleList[i].Active = false;    //that collectible alone will become inactive
+                            newPlayer.LevelScore += 1;    //Increments the player's level score
+                            newPlayer.TotalScore += 1;    //Increments the player's total score
+                        }
+                    }
 
                     if (timer <= 0)    //Once the timer hits 0....
                     {
                         activeState = GameStates.GameOver;    //the game will transition to the game over screen
                     }
 
+                    if (newPlayer.LevelScore == collectibleList.Count)
+                    {
+                        NextLevel();
+                    }
+
                     break;
 
                 //Game Over
                 case GameStates.GameOver:
-                    //Engages a complete reset for the timer and scores
-                    ResetGame();
 
                     if (SingleKeyPress(Keys.Enter, kbState) == true)    //Once the player presses the enter key here....
                     {
-                        activeState = GameStates.Game;    //The game will restart
+                        activeState = GameStates.Menu;    //the game will restart
                     }
 
                     break;
@@ -183,15 +270,45 @@ namespace JamesOrr_HW02
             switch (activeState)
             {
                 case GameStates.Menu:
-                    GraphicsDevice.Clear(Color.CornflowerBlue);
+                    GraphicsDevice.Clear(Color.CornflowerBlue);    //The background color will be blue on this screen
+
+                    spriteBatch.DrawString(mainFont, "Dragonfly Flight", new Vector2((windowWidth / 3) + 50, windowHeight / 3), Color.Black);    //The main title of the game
+
+                    spriteBatch.DrawString(spriteFont, "Welcome to Dragonfly Flight!", new Vector2(windowWidth / 6, windowHeight / 2), Color.Black);    //Introduces the player and tells them the controls
+                    spriteBatch.DrawString(spriteFont, "You will control a Dragonfly and collect the Flowers.", new Vector2(windowWidth / 6, (windowHeight / 2) + 20), Color.Black);
+                    spriteBatch.DrawString(spriteFont, "Press the up, down, left, and right buttons to move.", new Vector2(windowWidth / 6, (windowHeight / 2) + 40), Color.Black);
+                    spriteBatch.DrawString(spriteFont, "Be sure to collect every flower before running out of time to advance.", new Vector2(windowWidth / 6, (windowHeight / 2) + 60), Color.Black);
+                    spriteBatch.DrawString(mainFont, "Press ENTER to start the game", new Vector2((windowWidth / 3) - 50, (windowHeight / 4) * 3), Color.Black);
+
                     break;
 
                 case GameStates.Game:
-                    GraphicsDevice.Clear(Color.LightYellow);
+                    GraphicsDevice.Clear(Color.LightYellow);    //The background color will be yellow on this screen
+
+                    newPlayer.Draw(spriteBatch);    //Draws the player on the screen
+
+                    for (int i = 0; i < collectibleList.Count; i++)    //For every collectible in the list....
+                    {
+                        collectibleList[i].Draw(spriteBatch);    //the item will be drawn onto the screen
+                    }
+
+                    spriteBatch.DrawString(spriteFont, "Level : " + currentLevel, new Vector2(10, 10), Color.Black);    //Creates each section of the HUD
+                    spriteBatch.DrawString(spriteFont, "Level Score : " + newPlayer.LevelScore, new Vector2(10, 30), Color.Black);
+                    spriteBatch.DrawString(spriteFont, "Time Left : " + String.Format("{0:0.00}", timer), new Vector2(10, 50), Color.Black);
+                    //Writing each of these last will place them over the game objects and not obstruct the view od the HUD
+
                     break;
 
                 case GameStates.GameOver:
-                    GraphicsDevice.Clear(Color.Red);
+                    GraphicsDevice.Clear(Color.Red);    //The background color will be red on this screen
+
+                    spriteBatch.DrawString(mainFont, "GAME OVER", new Vector2((windowWidth / 3) + 50, windowHeight / 3), Color.White);    //Displays the game over text
+
+                    spriteBatch.DrawString(spriteFont, "You reached Level : " + currentLevel, new Vector2(windowWidth / 3, windowHeight / 2), Color.White);    //Text that displays the player's progress
+                    spriteBatch.DrawString(spriteFont, "Your End Score is : " + newPlayer.TotalScore, new Vector2(windowWidth / 3, (windowHeight / 2) + 20), Color.White);
+
+                    spriteBatch.DrawString(mainFont, "Press ENTER to return to the menu", new Vector2(windowWidth / 5, (windowHeight / 3) * 2), Color.White);    //Text that tells the player how to restart the game
+
                     break;
             }
 
