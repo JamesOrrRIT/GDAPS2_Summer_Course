@@ -212,6 +212,7 @@
             this.Grid2J.Size = new System.Drawing.Size(25, 25);
             this.Grid2J.TabIndex = 19;
             this.Grid2J.UseVisualStyleBackColor = false;
+            this.Grid2J.Click += new System.EventHandler(this.Grid2J_Click);
             // 
             // Grid2I
             // 
@@ -221,6 +222,7 @@
             this.Grid2I.Size = new System.Drawing.Size(25, 25);
             this.Grid2I.TabIndex = 18;
             this.Grid2I.UseVisualStyleBackColor = false;
+            this.Grid2I.Click += new System.EventHandler(this.Grid2I_Click);
             // 
             // Grid2H
             // 
@@ -230,6 +232,7 @@
             this.Grid2H.Size = new System.Drawing.Size(25, 25);
             this.Grid2H.TabIndex = 17;
             this.Grid2H.UseVisualStyleBackColor = false;
+            this.Grid2H.Click += new System.EventHandler(this.Grid2H_Click);
             // 
             // Grid2G
             // 
@@ -239,6 +242,7 @@
             this.Grid2G.Size = new System.Drawing.Size(25, 25);
             this.Grid2G.TabIndex = 16;
             this.Grid2G.UseVisualStyleBackColor = false;
+            this.Grid2G.Click += new System.EventHandler(this.Grid2G_Click);
             // 
             // Grid2F
             // 
@@ -248,6 +252,7 @@
             this.Grid2F.Size = new System.Drawing.Size(25, 25);
             this.Grid2F.TabIndex = 15;
             this.Grid2F.UseVisualStyleBackColor = false;
+            this.Grid2F.Click += new System.EventHandler(this.Grid2F_Click);
             // 
             // Grid2E
             // 
@@ -257,6 +262,7 @@
             this.Grid2E.Size = new System.Drawing.Size(25, 25);
             this.Grid2E.TabIndex = 14;
             this.Grid2E.UseVisualStyleBackColor = false;
+            this.Grid2E.Click += new System.EventHandler(this.Grid2E_Click);
             // 
             // Grid2D
             // 
@@ -266,6 +272,7 @@
             this.Grid2D.Size = new System.Drawing.Size(25, 25);
             this.Grid2D.TabIndex = 13;
             this.Grid2D.UseVisualStyleBackColor = false;
+            this.Grid2D.Click += new System.EventHandler(this.Grid2D_Click);
             // 
             // Grid2C
             // 
@@ -275,6 +282,7 @@
             this.Grid2C.Size = new System.Drawing.Size(25, 25);
             this.Grid2C.TabIndex = 12;
             this.Grid2C.UseVisualStyleBackColor = false;
+            this.Grid2C.Click += new System.EventHandler(this.Grid2C_Click);
             // 
             // Grid2B
             // 
@@ -284,6 +292,7 @@
             this.Grid2B.Size = new System.Drawing.Size(25, 25);
             this.Grid2B.TabIndex = 11;
             this.Grid2B.UseVisualStyleBackColor = false;
+            this.Grid2B.Click += new System.EventHandler(this.Grid2B_Click);
             // 
             // Grid2A
             // 
@@ -293,6 +302,7 @@
             this.Grid2A.Size = new System.Drawing.Size(25, 25);
             this.Grid2A.TabIndex = 10;
             this.Grid2A.UseVisualStyleBackColor = false;
+            this.Grid2A.Click += new System.EventHandler(this.Grid2A_Click);
             // 
             // Grid3J
             // 
@@ -302,6 +312,7 @@
             this.Grid3J.Size = new System.Drawing.Size(25, 25);
             this.Grid3J.TabIndex = 29;
             this.Grid3J.UseVisualStyleBackColor = false;
+            this.Grid3J.Click += new System.EventHandler(this.Grid3J_Click);
             // 
             // Grid3I
             // 
@@ -311,6 +322,7 @@
             this.Grid3I.Size = new System.Drawing.Size(25, 25);
             this.Grid3I.TabIndex = 28;
             this.Grid3I.UseVisualStyleBackColor = false;
+            this.Grid3I.Click += new System.EventHandler(this.Grid3I_Click);
             // 
             // Grid3H
             // 
@@ -320,6 +332,7 @@
             this.Grid3H.Size = new System.Drawing.Size(25, 25);
             this.Grid3H.TabIndex = 27;
             this.Grid3H.UseVisualStyleBackColor = false;
+            this.Grid3H.Click += new System.EventHandler(this.Grid3H_Click);
             // 
             // Grid3G
             // 
@@ -329,6 +342,7 @@
             this.Grid3G.Size = new System.Drawing.Size(25, 25);
             this.Grid3G.TabIndex = 26;
             this.Grid3G.UseVisualStyleBackColor = false;
+            this.Grid3G.Click += new System.EventHandler(this.Grid3G_Click);
             // 
             // Grid3F
             // 
@@ -338,6 +352,7 @@
             this.Grid3F.Size = new System.Drawing.Size(25, 25);
             this.Grid3F.TabIndex = 25;
             this.Grid3F.UseVisualStyleBackColor = false;
+            this.Grid3F.Click += new System.EventHandler(this.Grid3F_Click);
             // 
             // Grid3E
             // 
@@ -347,6 +362,7 @@
             this.Grid3E.Size = new System.Drawing.Size(25, 25);
             this.Grid3E.TabIndex = 24;
             this.Grid3E.UseVisualStyleBackColor = false;
+            this.Grid3E.Click += new System.EventHandler(this.Grid3E_Click);
             // 
             // Grid3D
             // 
@@ -356,6 +372,7 @@
             this.Grid3D.Size = new System.Drawing.Size(25, 25);
             this.Grid3D.TabIndex = 23;
             this.Grid3D.UseVisualStyleBackColor = false;
+            this.Grid3D.Click += new System.EventHandler(this.Grid3D_Click);
             // 
             // Grid3C
             // 
@@ -365,6 +382,7 @@
             this.Grid3C.Size = new System.Drawing.Size(25, 25);
             this.Grid3C.TabIndex = 22;
             this.Grid3C.UseVisualStyleBackColor = false;
+            this.Grid3C.Click += new System.EventHandler(this.Grid3C_Click);
             // 
             // Grid3B
             // 
@@ -374,6 +392,7 @@
             this.Grid3B.Size = new System.Drawing.Size(25, 25);
             this.Grid3B.TabIndex = 21;
             this.Grid3B.UseVisualStyleBackColor = false;
+            this.Grid3B.Click += new System.EventHandler(this.Grid3B_Click);
             // 
             // Grid3A
             // 
@@ -383,6 +402,7 @@
             this.Grid3A.Size = new System.Drawing.Size(25, 25);
             this.Grid3A.TabIndex = 20;
             this.Grid3A.UseVisualStyleBackColor = false;
+            this.Grid3A.Click += new System.EventHandler(this.Grid3A_Click);
             // 
             // Grid4J
             // 
@@ -392,6 +412,7 @@
             this.Grid4J.Size = new System.Drawing.Size(25, 25);
             this.Grid4J.TabIndex = 39;
             this.Grid4J.UseVisualStyleBackColor = false;
+            this.Grid4J.Click += new System.EventHandler(this.Grid4J_Click);
             // 
             // Grid4I
             // 
@@ -401,6 +422,7 @@
             this.Grid4I.Size = new System.Drawing.Size(25, 25);
             this.Grid4I.TabIndex = 38;
             this.Grid4I.UseVisualStyleBackColor = false;
+            this.Grid4I.Click += new System.EventHandler(this.Grid4I_Click);
             // 
             // Grid4H
             // 
@@ -410,6 +432,7 @@
             this.Grid4H.Size = new System.Drawing.Size(25, 25);
             this.Grid4H.TabIndex = 37;
             this.Grid4H.UseVisualStyleBackColor = false;
+            this.Grid4H.Click += new System.EventHandler(this.Grid4H_Click);
             // 
             // Grid4G
             // 
@@ -419,6 +442,7 @@
             this.Grid4G.Size = new System.Drawing.Size(25, 25);
             this.Grid4G.TabIndex = 36;
             this.Grid4G.UseVisualStyleBackColor = false;
+            this.Grid4G.Click += new System.EventHandler(this.Grid4G_Click);
             // 
             // Grid4F
             // 
@@ -428,6 +452,7 @@
             this.Grid4F.Size = new System.Drawing.Size(25, 25);
             this.Grid4F.TabIndex = 35;
             this.Grid4F.UseVisualStyleBackColor = false;
+            this.Grid4F.Click += new System.EventHandler(this.Grid4F_Click);
             // 
             // Grid4E
             // 
@@ -437,6 +462,7 @@
             this.Grid4E.Size = new System.Drawing.Size(25, 25);
             this.Grid4E.TabIndex = 34;
             this.Grid4E.UseVisualStyleBackColor = false;
+            this.Grid4E.Click += new System.EventHandler(this.Grid4E_Click);
             // 
             // Grid4D
             // 
@@ -446,6 +472,7 @@
             this.Grid4D.Size = new System.Drawing.Size(25, 25);
             this.Grid4D.TabIndex = 33;
             this.Grid4D.UseVisualStyleBackColor = false;
+            this.Grid4D.Click += new System.EventHandler(this.Grid4D_Click);
             // 
             // Grid4C
             // 
@@ -455,6 +482,7 @@
             this.Grid4C.Size = new System.Drawing.Size(25, 25);
             this.Grid4C.TabIndex = 32;
             this.Grid4C.UseVisualStyleBackColor = false;
+            this.Grid4C.Click += new System.EventHandler(this.Grid4C_Click);
             // 
             // Grid4B
             // 
@@ -464,6 +492,7 @@
             this.Grid4B.Size = new System.Drawing.Size(25, 25);
             this.Grid4B.TabIndex = 31;
             this.Grid4B.UseVisualStyleBackColor = false;
+            this.Grid4B.Click += new System.EventHandler(this.Grid4B_Click);
             // 
             // Grid4A
             // 
@@ -473,6 +502,7 @@
             this.Grid4A.Size = new System.Drawing.Size(25, 25);
             this.Grid4A.TabIndex = 30;
             this.Grid4A.UseVisualStyleBackColor = false;
+            this.Grid4A.Click += new System.EventHandler(this.Grid4A_Click);
             // 
             // Grid5J
             // 
@@ -482,6 +512,7 @@
             this.Grid5J.Size = new System.Drawing.Size(25, 25);
             this.Grid5J.TabIndex = 49;
             this.Grid5J.UseVisualStyleBackColor = false;
+            this.Grid5J.Click += new System.EventHandler(this.Grid5J_Click);
             // 
             // Grid5I
             // 
@@ -491,6 +522,7 @@
             this.Grid5I.Size = new System.Drawing.Size(25, 25);
             this.Grid5I.TabIndex = 48;
             this.Grid5I.UseVisualStyleBackColor = false;
+            this.Grid5I.Click += new System.EventHandler(this.Grid5I_Click);
             // 
             // Grid5H
             // 
@@ -500,6 +532,7 @@
             this.Grid5H.Size = new System.Drawing.Size(25, 25);
             this.Grid5H.TabIndex = 47;
             this.Grid5H.UseVisualStyleBackColor = false;
+            this.Grid5H.Click += new System.EventHandler(this.Grid5H_Click);
             // 
             // Grid5G
             // 
@@ -509,6 +542,7 @@
             this.Grid5G.Size = new System.Drawing.Size(25, 25);
             this.Grid5G.TabIndex = 46;
             this.Grid5G.UseVisualStyleBackColor = false;
+            this.Grid5G.Click += new System.EventHandler(this.Grid5G_Click);
             // 
             // Grid5F
             // 
@@ -518,6 +552,7 @@
             this.Grid5F.Size = new System.Drawing.Size(25, 25);
             this.Grid5F.TabIndex = 45;
             this.Grid5F.UseVisualStyleBackColor = false;
+            this.Grid5F.Click += new System.EventHandler(this.Grid5F_Click);
             // 
             // Grid5E
             // 
@@ -527,6 +562,7 @@
             this.Grid5E.Size = new System.Drawing.Size(25, 25);
             this.Grid5E.TabIndex = 44;
             this.Grid5E.UseVisualStyleBackColor = false;
+            this.Grid5E.Click += new System.EventHandler(this.Grid5E_Click);
             // 
             // Grid5D
             // 
@@ -536,6 +572,7 @@
             this.Grid5D.Size = new System.Drawing.Size(25, 25);
             this.Grid5D.TabIndex = 43;
             this.Grid5D.UseVisualStyleBackColor = false;
+            this.Grid5D.Click += new System.EventHandler(this.Grid5D_Click);
             // 
             // Grid5C
             // 
@@ -545,6 +582,7 @@
             this.Grid5C.Size = new System.Drawing.Size(25, 25);
             this.Grid5C.TabIndex = 42;
             this.Grid5C.UseVisualStyleBackColor = false;
+            this.Grid5C.Click += new System.EventHandler(this.Grid5C_Click);
             // 
             // Grid5B
             // 
@@ -554,6 +592,7 @@
             this.Grid5B.Size = new System.Drawing.Size(25, 25);
             this.Grid5B.TabIndex = 41;
             this.Grid5B.UseVisualStyleBackColor = false;
+            this.Grid5B.Click += new System.EventHandler(this.Grid5B_Click);
             // 
             // Grid5A
             // 
@@ -563,6 +602,7 @@
             this.Grid5A.Size = new System.Drawing.Size(25, 25);
             this.Grid5A.TabIndex = 40;
             this.Grid5A.UseVisualStyleBackColor = false;
+            this.Grid5A.Click += new System.EventHandler(this.Grid5A_Click);
             // 
             // Grid6J
             // 
@@ -572,6 +612,7 @@
             this.Grid6J.Size = new System.Drawing.Size(25, 25);
             this.Grid6J.TabIndex = 59;
             this.Grid6J.UseVisualStyleBackColor = false;
+            this.Grid6J.Click += new System.EventHandler(this.Grid6J_Click);
             // 
             // Grid6I
             // 
@@ -581,6 +622,7 @@
             this.Grid6I.Size = new System.Drawing.Size(25, 25);
             this.Grid6I.TabIndex = 58;
             this.Grid6I.UseVisualStyleBackColor = false;
+            this.Grid6I.Click += new System.EventHandler(this.Grid6I_Click);
             // 
             // Grid6H
             // 
@@ -590,6 +632,7 @@
             this.Grid6H.Size = new System.Drawing.Size(25, 25);
             this.Grid6H.TabIndex = 57;
             this.Grid6H.UseVisualStyleBackColor = false;
+            this.Grid6H.Click += new System.EventHandler(this.Grid6H_Click);
             // 
             // Grid6G
             // 
@@ -599,6 +642,7 @@
             this.Grid6G.Size = new System.Drawing.Size(25, 25);
             this.Grid6G.TabIndex = 56;
             this.Grid6G.UseVisualStyleBackColor = false;
+            this.Grid6G.Click += new System.EventHandler(this.Grid6G_Click);
             // 
             // Grid6F
             // 
@@ -608,6 +652,7 @@
             this.Grid6F.Size = new System.Drawing.Size(25, 25);
             this.Grid6F.TabIndex = 55;
             this.Grid6F.UseVisualStyleBackColor = false;
+            this.Grid6F.Click += new System.EventHandler(this.Grid6F_Click);
             // 
             // Grid6E
             // 
@@ -617,6 +662,7 @@
             this.Grid6E.Size = new System.Drawing.Size(25, 25);
             this.Grid6E.TabIndex = 54;
             this.Grid6E.UseVisualStyleBackColor = false;
+            this.Grid6E.Click += new System.EventHandler(this.Grid6E_Click);
             // 
             // Grid6D
             // 
@@ -626,6 +672,7 @@
             this.Grid6D.Size = new System.Drawing.Size(25, 25);
             this.Grid6D.TabIndex = 53;
             this.Grid6D.UseVisualStyleBackColor = false;
+            this.Grid6D.Click += new System.EventHandler(this.Grid6D_Click);
             // 
             // Grid6C
             // 
@@ -635,6 +682,7 @@
             this.Grid6C.Size = new System.Drawing.Size(25, 25);
             this.Grid6C.TabIndex = 52;
             this.Grid6C.UseVisualStyleBackColor = false;
+            this.Grid6C.Click += new System.EventHandler(this.Grid6C_Click);
             // 
             // Grid6B
             // 
@@ -644,6 +692,7 @@
             this.Grid6B.Size = new System.Drawing.Size(25, 25);
             this.Grid6B.TabIndex = 51;
             this.Grid6B.UseVisualStyleBackColor = false;
+            this.Grid6B.Click += new System.EventHandler(this.Grid6B_Click);
             // 
             // Grid6A
             // 
@@ -653,6 +702,7 @@
             this.Grid6A.Size = new System.Drawing.Size(25, 25);
             this.Grid6A.TabIndex = 50;
             this.Grid6A.UseVisualStyleBackColor = false;
+            this.Grid6A.Click += new System.EventHandler(this.Grid6A_Click);
             // 
             // Grid7J
             // 
@@ -662,6 +712,7 @@
             this.Grid7J.Size = new System.Drawing.Size(25, 25);
             this.Grid7J.TabIndex = 69;
             this.Grid7J.UseVisualStyleBackColor = false;
+            this.Grid7J.Click += new System.EventHandler(this.Grid7J_Click);
             // 
             // Grid7I
             // 
@@ -671,6 +722,7 @@
             this.Grid7I.Size = new System.Drawing.Size(25, 25);
             this.Grid7I.TabIndex = 68;
             this.Grid7I.UseVisualStyleBackColor = false;
+            this.Grid7I.Click += new System.EventHandler(this.Grid7I_Click);
             // 
             // Grid7H
             // 
@@ -680,6 +732,7 @@
             this.Grid7H.Size = new System.Drawing.Size(25, 25);
             this.Grid7H.TabIndex = 67;
             this.Grid7H.UseVisualStyleBackColor = false;
+            this.Grid7H.Click += new System.EventHandler(this.Grid7H_Click);
             // 
             // Grid7G
             // 
@@ -689,6 +742,7 @@
             this.Grid7G.Size = new System.Drawing.Size(25, 25);
             this.Grid7G.TabIndex = 66;
             this.Grid7G.UseVisualStyleBackColor = false;
+            this.Grid7G.Click += new System.EventHandler(this.Grid7G_Click);
             // 
             // Grid7F
             // 
@@ -698,6 +752,7 @@
             this.Grid7F.Size = new System.Drawing.Size(25, 25);
             this.Grid7F.TabIndex = 65;
             this.Grid7F.UseVisualStyleBackColor = false;
+            this.Grid7F.Click += new System.EventHandler(this.Grid7F_Click);
             // 
             // Grid7E
             // 
@@ -707,6 +762,7 @@
             this.Grid7E.Size = new System.Drawing.Size(25, 25);
             this.Grid7E.TabIndex = 64;
             this.Grid7E.UseVisualStyleBackColor = false;
+            this.Grid7E.Click += new System.EventHandler(this.Grid7E_Click);
             // 
             // Grid7D
             // 
@@ -716,6 +772,7 @@
             this.Grid7D.Size = new System.Drawing.Size(25, 25);
             this.Grid7D.TabIndex = 63;
             this.Grid7D.UseVisualStyleBackColor = false;
+            this.Grid7D.Click += new System.EventHandler(this.Grid7D_Click);
             // 
             // Grid7C
             // 
@@ -725,6 +782,7 @@
             this.Grid7C.Size = new System.Drawing.Size(25, 25);
             this.Grid7C.TabIndex = 62;
             this.Grid7C.UseVisualStyleBackColor = false;
+            this.Grid7C.Click += new System.EventHandler(this.Grid7C_Click);
             // 
             // Grid7B
             // 
@@ -734,6 +792,7 @@
             this.Grid7B.Size = new System.Drawing.Size(25, 25);
             this.Grid7B.TabIndex = 61;
             this.Grid7B.UseVisualStyleBackColor = false;
+            this.Grid7B.Click += new System.EventHandler(this.Grid7B_Click);
             // 
             // Grid7A
             // 
@@ -743,6 +802,7 @@
             this.Grid7A.Size = new System.Drawing.Size(25, 25);
             this.Grid7A.TabIndex = 60;
             this.Grid7A.UseVisualStyleBackColor = false;
+            this.Grid7A.Click += new System.EventHandler(this.Grid7A_Click);
             // 
             // TextLabel
             // 
@@ -779,6 +839,7 @@
             this.clearButton.TabIndex = 73;
             this.clearButton.Text = "Clear Grid";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // LevelDesignForm
             // 
