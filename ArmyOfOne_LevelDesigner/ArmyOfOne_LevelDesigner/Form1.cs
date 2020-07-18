@@ -18,6 +18,8 @@ namespace ArmyOfOne_LevelDesigner
             InitializeComponent();
         }
 
+        //Row 1 Click methods
+        #region
         private void Grid1A_Click(object sender, EventArgs e)
         {
             if (Grid1A.BackColor == Color.White)
@@ -147,7 +149,10 @@ namespace ArmyOfOne_LevelDesigner
                 Grid1J.BackColor = Color.White;
             }
         }
+        #endregion
 
+        //Row 2 Click methods
+        #region
         private void Grid2A_Click(object sender, EventArgs e)
         {
             if (Grid2A.BackColor == Color.White)
@@ -277,7 +282,10 @@ namespace ArmyOfOne_LevelDesigner
                 Grid2J.BackColor = Color.White;
             }
         }
+        #endregion
 
+        //Row 3 Click methods
+        #region
         private void Grid3A_Click(object sender, EventArgs e)
         {
             if (Grid3A.BackColor == Color.White)
@@ -407,7 +415,10 @@ namespace ArmyOfOne_LevelDesigner
                 Grid3J.BackColor = Color.White;
             }
         }
+        #endregion
 
+        //Row 4 Click methods
+        #region
         private void Grid4A_Click(object sender, EventArgs e)
         {
             if (Grid4A.BackColor == Color.White)
@@ -537,7 +548,10 @@ namespace ArmyOfOne_LevelDesigner
                 Grid4J.BackColor = Color.White;
             }
         }
+        #endregion
 
+        //Row 5 Click methods
+        #region
         private void Grid5A_Click(object sender, EventArgs e)
         {
             if (Grid5A.BackColor == Color.White)
@@ -667,7 +681,10 @@ namespace ArmyOfOne_LevelDesigner
                 Grid5J.BackColor = Color.White;
             }
         }
+        #endregion
 
+        //Row 6 Click methods
+        #region
         private void Grid6A_Click(object sender, EventArgs e)
         {
             if (Grid6A.BackColor == Color.White)
@@ -797,7 +814,10 @@ namespace ArmyOfOne_LevelDesigner
                 Grid6J.BackColor = Color.White;
             }
         }
+        #endregion
 
+        //Row 7 Click methods
+        #region
         private void Grid7A_Click(object sender, EventArgs e)
         {
             if (Grid7A.BackColor == Color.White)
@@ -927,10 +947,12 @@ namespace ArmyOfOne_LevelDesigner
                 Grid7J.BackColor = Color.White;
             }
         }
+        #endregion
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             //Resets row 1
+            #region
             Grid1A.BackColor = Color.White;
             Grid1B.BackColor = Color.White;
             Grid1C.BackColor = Color.White;
@@ -941,7 +963,10 @@ namespace ArmyOfOne_LevelDesigner
             Grid1H.BackColor = Color.White;
             Grid1I.BackColor = Color.White;
             Grid1J.BackColor = Color.White;
+            #endregion
+
             //Resets row 2
+            #region
             Grid2A.BackColor = Color.White;
             Grid2B.BackColor = Color.White;
             Grid2C.BackColor = Color.White;
@@ -952,7 +977,10 @@ namespace ArmyOfOne_LevelDesigner
             Grid2H.BackColor = Color.White;
             Grid2I.BackColor = Color.White;
             Grid2J.BackColor = Color.White;
+            #endregion
+
             //Resets row 3
+            #region
             Grid3A.BackColor = Color.White;
             Grid3B.BackColor = Color.White;
             Grid3C.BackColor = Color.White;
@@ -963,7 +991,10 @@ namespace ArmyOfOne_LevelDesigner
             Grid3H.BackColor = Color.White;
             Grid3I.BackColor = Color.White;
             Grid3J.BackColor = Color.White;
+            #endregion
+
             //Resets row 4
+            #region
             Grid4A.BackColor = Color.White;
             Grid4B.BackColor = Color.White;
             Grid4C.BackColor = Color.White;
@@ -974,7 +1005,10 @@ namespace ArmyOfOne_LevelDesigner
             Grid4H.BackColor = Color.White;
             Grid4I.BackColor = Color.White;
             Grid4J.BackColor = Color.White;
+            #endregion
+
             //Resets row 5
+            #region
             Grid5A.BackColor = Color.White;
             Grid5B.BackColor = Color.White;
             Grid5C.BackColor = Color.White;
@@ -985,7 +1019,10 @@ namespace ArmyOfOne_LevelDesigner
             Grid5H.BackColor = Color.White;
             Grid5I.BackColor = Color.White;
             Grid5J.BackColor = Color.White;
+            #endregion
+
             //Resets row 6
+            #region
             Grid6A.BackColor = Color.White;
             Grid6B.BackColor = Color.White;
             Grid6C.BackColor = Color.White;
@@ -996,7 +1033,10 @@ namespace ArmyOfOne_LevelDesigner
             Grid6H.BackColor = Color.White;
             Grid6I.BackColor = Color.White;
             Grid6J.BackColor = Color.White;
+            #endregion
+
             //Resets row 7
+            #region
             Grid7A.BackColor = Color.White;
             Grid7B.BackColor = Color.White;
             Grid7C.BackColor = Color.White;
@@ -1007,6 +1047,7 @@ namespace ArmyOfOne_LevelDesigner
             Grid7H.BackColor = Color.White;
             Grid7I.BackColor = Color.White;
             Grid7J.BackColor = Color.White;
+            #endregion
         }
 
         private void confirmLevelButton_Click(object sender, EventArgs e)
@@ -1026,7 +1067,7 @@ namespace ArmyOfOne_LevelDesigner
             }
 
             //Change the values of the grid array depending on the grid the user made
-            //Row 1
+            //Check Row 1
             #region
             if (Grid1A.BackColor == Color.Red)
             {
@@ -1079,7 +1120,7 @@ namespace ArmyOfOne_LevelDesigner
             }
             #endregion
 
-            //Row 2
+            //Check Row 2
             #region
             if (Grid2A.BackColor == Color.Red)
             {
@@ -1132,7 +1173,7 @@ namespace ArmyOfOne_LevelDesigner
             }
             #endregion
 
-            //Row 3
+            //Check Row 3
             #region
             if (Grid3A.BackColor == Color.Red)
             {
@@ -1185,7 +1226,7 @@ namespace ArmyOfOne_LevelDesigner
             }
             #endregion
 
-            //Row 4
+            //Check Row 4
             #region
             if (Grid4A.BackColor == Color.Red)
             {
@@ -1238,7 +1279,7 @@ namespace ArmyOfOne_LevelDesigner
             }
             #endregion
 
-            //Row 5
+            //Check Row 5
             #region
             if (Grid5A.BackColor == Color.Red)
             {
@@ -1291,7 +1332,7 @@ namespace ArmyOfOne_LevelDesigner
             }
             #endregion
 
-            //Row 6
+            //Check Row 6
             #region
             if (Grid6A.BackColor == Color.Red)
             {
@@ -1344,7 +1385,7 @@ namespace ArmyOfOne_LevelDesigner
             }
             #endregion
 
-            //Row 7
+            //Check Row 7
             #region
             if (Grid7A.BackColor == Color.Red)
             {
